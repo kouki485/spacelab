@@ -88,7 +88,7 @@ const LoadingScreen = {
    */
   hide() {
     if (!this.element) return;
-    
+
     // アニメーション軽減モードの場合は即座に非表示
     if (Utils.prefersReducedMotion()) {
       this.element.style.display = 'none';
@@ -96,7 +96,7 @@ const LoadingScreen = {
     }
 
     this.element.classList.add('hidden');
-    
+
     // トランジション完了後にDOMから削除
     setTimeout(() => {
       if (this.element && this.element.parentNode) {
@@ -107,48 +107,140 @@ const LoadingScreen = {
 };
 
 /**
- * 星空背景の生成
+ * 没入型宇宙×自然背景の生成
  */
 const StarsBackground = {
   container: null,
-  starCount: 100,
+  config: {
+    starsBack: 100,
+    starsMiddle: 70,
+    starsFront: 50,
+    shootingStars: 0,  // 流れ星なし
+    leaves: 12,
+    natureParticles: 20,
+    spaceParticles: 25
+  },
 
   /**
    * 初期化
    */
   init() {
-    // アニメーション軽減モードの場合はスキップ
-    if (Utils.prefersReducedMotion()) return;
+    if (Utils.prefersReducedMotion()) {
+      this.createSimpleBackground();
+      return;
+    }
 
     this.container = document.getElementById('stars');
     if (!this.container) return;
 
-    this.createStars();
+    this.createImmersiveBackground();
   },
 
   /**
-   * 星を生成
+   * 没入型背景を生成
    */
-  createStars() {
+  createImmersiveBackground() {
     const fragment = document.createDocumentFragment();
 
-    for (let i = 0; i < this.starCount; i++) {
+    // ベース背景
+    const cosmicBg = document.createElement('div');
+    cosmicBg.className = 'cosmic-bg';
+    fragment.appendChild(cosmicBg);
+
+    // 自然側のオーラ（左）
+    const natureGlow = document.createElement('div');
+    natureGlow.className = 'nature-glow';
+    fragment.appendChild(natureGlow);
+
+    // 銀河（右）
+    const galaxy = document.createElement('div');
+    galaxy.className = 'galaxy';
+    fragment.appendChild(galaxy);
+
+    // 渦巻き銀河
+    const spiralGalaxy = document.createElement('div');
+    spiralGalaxy.className = 'spiral-galaxy';
+    fragment.appendChild(spiralGalaxy);
+
+    // 惑星
+    this.createPlanets(fragment);
+
+    // つながりの光線
+    this.createConnectionBeams(fragment);
+
+    // 星レイヤー
+    fragment.appendChild(this.createStarsLayer('back', this.config.starsBack, 0.5, 1.5));
+    fragment.appendChild(this.createStarsLayer('middle', this.config.starsMiddle, 1, 2.5));
+    fragment.appendChild(this.createStarsLayer('front', this.config.starsFront, 2, 4));
+
+    // 流れ星
+    this.createShootingStars(fragment);
+
+    // 自然の葉っぱ（左側）
+    this.createLeaves(fragment);
+
+    // 自然の粒子（左側）
+    this.createNatureParticles(fragment);
+
+    // 宇宙の粒子（右側）
+    this.createSpaceParticles(fragment);
+
+    this.container.appendChild(fragment);
+  },
+
+  /**
+   * 惑星を生成
+   */
+  createPlanets(fragment) {
+    const sizes = ['large', 'medium', 'small'];
+    sizes.forEach(size => {
+      const planet = document.createElement('div');
+      planet.className = `planet planet--${size}`;
+      fragment.appendChild(planet);
+    });
+  },
+
+  /**
+   * つながりの光線を生成
+   */
+  createConnectionBeams(fragment) {
+    for (let i = 0; i < 3; i++) {
+      const beam = document.createElement('div');
+      beam.className = 'connection-beam';
+      fragment.appendChild(beam);
+    }
+  },
+
+  /**
+   * 星レイヤーを生成
+   */
+  createStarsLayer(layerName, count, minSize, maxSize) {
+    const layer = document.createElement('div');
+    layer.className = `stars-layer stars-layer--${layerName}`;
+
+    const colors = ['#ffffff', '#4A9EFF', '#B8A7E8', '#95D5B2', '#FFD700'];
+
+    for (let i = 0; i < count; i++) {
       const star = document.createElement('div');
-      star.className = 'star';
-      
-      // ランダムな位置
-      const x = Math.random() * 100;
-      const y = Math.random() * 100;
-      
-      // ランダムなサイズ（1-3px）
-      const size = Math.random() * 2 + 1;
-      
-      // ランダムなアニメーション設定
+
+      // 右側に多く配置（宇宙側）
+      const x = Math.random() * 200;
+      const y = Math.random() * 200;
+      const size = Math.random() * (maxSize - minSize) + minSize;
       const duration = Math.random() * 3 + 2;
       const delay = Math.random() * 5;
-      const opacity = Math.random() * 0.5 + 0.3;
+      const opacity = Math.random() * 0.5 + 0.5;
 
-      star.style.cssText = `
+      const isColored = Math.random() > 0.8;
+      const isBright = Math.random() > 0.85;
+
+      let className = 'star';
+      if (isBright) className += ' star--bright';
+      if (isColored) className += ' star--colored';
+
+      star.className = className;
+
+      let style = `
         left: ${x}%;
         top: ${y}%;
         width: ${size}px;
@@ -158,6 +250,149 @@ const StarsBackground = {
         --star-opacity: ${opacity};
       `;
 
+      if (isColored) {
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        style += `--star-color: ${color};`;
+      }
+
+      star.style.cssText = style;
+      layer.appendChild(star);
+    }
+
+    return layer;
+  },
+
+  /**
+     * 流れ星を生成（ゆっくり）
+     */
+  createShootingStars(fragment) {
+    for (let i = 0; i < this.config.shootingStars; i++) {
+      const shootingStar = document.createElement('div');
+      shootingStar.className = 'shooting-star';
+
+      const x = Math.random() * 60 + 30;
+      const y = Math.random() * 40;
+      const duration = Math.random() * 4 + 8; // 8〜12秒（ゆっくり）
+      const delay = Math.random() * 30 + i * 6;
+
+      shootingStar.style.cssText = `
+        left: ${x}%;
+        top: ${y}%;
+        --shooting-duration: ${duration}s;
+        --shooting-delay: ${delay}s;
+      `;
+
+      fragment.appendChild(shootingStar);
+    }
+  },
+
+  /**
+   * 葉っぱを生成（左側）
+   */
+  createLeaves(fragment) {
+    for (let i = 0; i < this.config.leaves; i++) {
+      const leaf = document.createElement('div');
+      leaf.className = 'leaf';
+
+      const x = Math.random() * 35;
+      const y = Math.random() * 100;
+      const size = Math.random() * 40 + 20;
+      const rotation = Math.random() * 360;
+      const duration = Math.random() * 10 + 10;
+      const delay = Math.random() * 8;
+      const opacity = Math.random() * 0.3 + 0.2;
+
+      leaf.style.cssText = `
+        left: ${x}%;
+        top: ${y}%;
+        --leaf-size: ${size}px;
+        --leaf-rotation: ${rotation}deg;
+        --leaf-duration: ${duration}s;
+        --leaf-delay: ${delay}s;
+        --leaf-opacity: ${opacity};
+      `;
+
+      fragment.appendChild(leaf);
+    }
+  },
+
+  /**
+   * 自然の粒子を生成（左側）
+   */
+  createNatureParticles(fragment) {
+    for (let i = 0; i < this.config.natureParticles; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'nature-particle';
+
+      const x = Math.random() * 40;
+      const y = Math.random() * 100;
+      const size = Math.random() * 10 + 5;
+      const duration = Math.random() * 15 + 10;
+      const delay = Math.random() * 10;
+
+      particle.style.cssText = `
+        left: ${x}%;
+        top: ${y}%;
+        --particle-size: ${size}px;
+        --float-duration: ${duration}s;
+        --float-delay: ${delay}s;
+      `;
+
+      fragment.appendChild(particle);
+    }
+  },
+
+  /**
+   * 宇宙の粒子を生成（右側）
+   */
+  createSpaceParticles(fragment) {
+    for (let i = 0; i < this.config.spaceParticles; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'space-particle';
+
+      const x = Math.random() * 50;
+      const y = Math.random() * 100;
+      const size = Math.random() * 8 + 4;
+      const duration = Math.random() * 20 + 15;
+      const delay = Math.random() * 12;
+
+      particle.style.cssText = `
+        right: ${x}%;
+        top: ${y}%;
+        --particle-size: ${size}px;
+        --float-duration: ${duration}s;
+        --float-delay: ${delay}s;
+      `;
+
+      fragment.appendChild(particle);
+    }
+  },
+
+  /**
+   * 簡易版背景
+   */
+  createSimpleBackground() {
+    this.container = document.getElementById('stars');
+    if (!this.container) return;
+
+    const fragment = document.createDocumentFragment();
+
+    // シンプルな背景
+    const bg = document.createElement('div');
+    bg.className = 'cosmic-bg';
+    fragment.appendChild(bg);
+
+    // 静的な星
+    for (let i = 0; i < 80; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.cssText = `
+        left: ${Math.random() * 100}%;
+        top: ${Math.random() * 100}%;
+        width: ${Math.random() * 2 + 1}px;
+        height: ${Math.random() * 2 + 1}px;
+        opacity: ${Math.random() * 0.6 + 0.3};
+      `;
       fragment.appendChild(star);
     }
 
@@ -270,7 +505,7 @@ const MobileNav = {
     this.hamburger.classList.add('active');
     this.hamburger.setAttribute('aria-expanded', 'true');
     this.nav.classList.add('active');
-    
+
     if (this.overlay) {
       this.overlay.classList.add('active');
     }
@@ -289,7 +524,7 @@ const MobileNav = {
     this.hamburger.classList.remove('active');
     this.hamburger.setAttribute('aria-expanded', 'false');
     this.nav.classList.remove('active');
-    
+
     if (this.overlay) {
       this.overlay.classList.remove('active');
     }
@@ -412,7 +647,7 @@ const ActiveNavigation = {
    */
   init() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    
+
     // デスクトップナビゲーション
     document.querySelectorAll('.nav__link').forEach(link => {
       const href = link.getAttribute('href');
@@ -556,5 +791,6 @@ const App = {
 
 // アプリケーション開始
 App.init();
+
 
 

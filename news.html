@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="合同会社Space Labのお知らせ・ニュース一覧 - 最新情報やイベント、プレスリリースをお届けします。">
+  
+  <!-- OGP設定 -->
+  <meta property="og:title" content="お知らせ | 合同会社Space Lab">
+  <meta property="og:description" content="合同会社Space Labの最新情報やイベント、プレスリリースをお届けします。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://spacelab369net.com/news.html">
+  <meta property="og:image" content="https://spacelab369net.com/images/ogp-news.jpg">
+  <meta property="og:site_name" content="合同会社Space Lab">
+  
+  <title>お知らせ | 合同会社Space Lab</title>
+  
+  <!-- ファビコン -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%230A0E27' stroke='%234A9EFF' stroke-width='4'/><circle cx='50' cy='50' r='15' fill='%234A9EFF'/></svg>">
+  
+  <!-- CSS読み込み -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- ローディング画面 -->
+  <div class="loading-screen" id="loading" aria-hidden="true">
+    <div class="loading-content">
+      <div class="loading-orbit">
+        <div class="loading-sun"></div>
+        <div class="loading-planet"></div>
+        <div class="loading-planet loading-planet-2"></div>
+      </div>
+      <p class="loading-text">Loading...</p>
+    </div>
+  </div>
+
+  <!-- 星空背景 -->
+  <div class="stars-container" id="stars" aria-hidden="true"></div>
+
+  <!-- ヘッダー -->
+  <header class="header" id="header" role="banner">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo" aria-label="Space Lab ホーム">
+        <img src="images/logo.jpeg" alt="Space Lab" class="header__logo-img">
+      </a>
+      
+      <nav class="nav" role="navigation" aria-label="メインナビゲーション">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="business.html" class="nav__link">Business</a></li>
+          <li><a href="company.html" class="nav__link">Company</a></li>
+          <li><a href="news.html" class="nav__link active">News</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-nav">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- モバイルナビゲーション -->
+  <div class="mobile-nav__overlay" id="mobile-nav-overlay" aria-hidden="true"></div>
+  <nav class="mobile-nav" id="mobile-nav" role="navigation" aria-label="モバイルナビゲーション">
+    <ul class="mobile-nav__list">
+      <li><a href="index.html" class="mobile-nav__link">Home</a></li>
+      <li><a href="business.html" class="mobile-nav__link">Business</a></li>
+      <li><a href="company.html" class="mobile-nav__link">Company</a></li>
+      <li><a href="news.html" class="mobile-nav__link active">News</a></li>
+      <li><a href="contact.html" class="mobile-nav__link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- メインコンテンツ -->
+  <main class="main" id="main" role="main">
+    
+    <!-- ページヘッダー -->
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-header__title fade-in">News</h1>
+        <p class="page-header__subtitle fade-in delay-1">お知らせ</p>
+      </div>
+    </section>
+
+    <!-- ニュース一覧 -->
+    <section class="section" aria-labelledby="news-list-title">
+      <div class="container">
+        <h2 class="sr-only" id="news-list-title">お知らせ一覧</h2>
+        
+        <div class="news-list">
+          <!-- ニュース1 -->
+          <article class="news-card fade-in delay-1">
+            <div class="news-card__date">
+              <span class="news-card__year">2024</span>
+              <span class="news-card__day">12.20</span>
+            </div>
+            <div class="news-card__content">
+              <span class="news-card__category">お知らせ</span>
+              <h3 class="news-card__title">ウェブサイトをリニューアルしました</h3>
+              <p class="news-card__excerpt">
+                合同会社Space Labのコーポレートサイトをリニューアルいたしました。
+                新しいデザインでより分かりやすく、事業内容や会社情報をお伝えしてまいります。
+                今後ともどうぞよろしくお願いいたします。
+              </p>
+            </div>
+          </article>
+
+          <!-- ニュース2 -->
+          <article class="news-card fade-in delay-2">
+            <div class="news-card__date">
+              <span class="news-card__year">2024</span>
+              <span class="news-card__day">12.15</span>
+            </div>
+            <div class="news-card__content">
+              <span class="news-card__category">お知らせ</span>
+              <h3 class="news-card__title">年末年始の営業についてのお知らせ</h3>
+              <p class="news-card__excerpt">
+                誠に勝手ながら、下記の期間を年末年始休業とさせていただきます。<br>
+                【休業期間】2024年12月28日（土）～ 2025年1月5日（日）<br>
+                休業期間中のお問い合わせにつきましては、1月6日（月）以降順次対応させていただきます。
+              </p>
+            </div>
+          </article>
+
+          <!-- ニュース3 -->
+          <article class="news-card fade-in delay-3">
+            <div class="news-card__date">
+              <span class="news-card__year">2024</span>
+              <span class="news-card__day">12.01</span>
+            </div>
+            <div class="news-card__content">
+              <span class="news-card__category">イベント</span>
+              <h3 class="news-card__title">新しい宇宙科学ワークショップの開催が決定しました</h3>
+              <p class="news-card__excerpt">
+                2025年春、子どもから大人まで楽しめる宇宙科学ワークショップを開催いたします。
+                天体観測や惑星模型の制作など、宇宙の神秘を体験できるプログラムをご用意しています。
+                詳細は決まり次第お知らせいたします。
+              </p>
+            </div>
+          </article>
+
+          <!-- ニュース4（プレースホルダー） -->
+          <article class="news-card fade-in delay-4">
+            <div class="news-card__date">
+              <span class="news-card__year">2024</span>
+              <span class="news-card__day">11.15</span>
+            </div>
+            <div class="news-card__content">
+              <span class="news-card__category">プレスリリース</span>
+              <h3 class="news-card__title">新製品開発に関するお知らせ</h3>
+              <p class="news-card__excerpt">
+                自然由来成分を使用した新しいスキンケア製品の開発を進めております。
+                環境に配慮したサステナブルな製品づくりを目指し、研究開発を行っています。
+                製品の詳細は来春発表予定です。
+              </p>
+            </div>
+          </article>
+
+          <!-- ニュース5（プレースホルダー） -->
+          <article class="news-card fade-in delay-5">
+            <div class="news-card__date">
+              <span class="news-card__year">2024</span>
+              <span class="news-card__day">10.01</span>
+            </div>
+            <div class="news-card__content">
+              <span class="news-card__category">お知らせ</span>
+              <h3 class="news-card__title">合同会社Space Lab 設立準備のお知らせ</h3>
+              <p class="news-card__excerpt">
+                先端科学技術と自然の調和をコンセプトに、合同会社Space Labの設立準備を進めております。
+                宇宙と自然の融合から新しい価値を創造し、社会に貢献してまいります。
+              </p>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTAセクション -->
+    <section class="section cta-section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="fade-in">
+          <h2 class="cta-section__title" id="cta-title">お問い合わせ</h2>
+          <p class="cta-section__text">
+            取材・講演依頼、事業に関するご相談など、<br>
+            お気軽にお問い合わせください。
+          </p>
+          <a href="contact.html" class="btn btn--primary btn--large">お問い合わせはこちら</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__section">
+          <a href="index.html" class="footer__logo" aria-label="Space Lab ホーム">
+            <img src="images/logo.jpeg" alt="Space Lab" class="footer__logo-img">
+          </a>
+          <p class="footer__description">
+            先端科学技術と自然の調和をテーマに、<br>
+            AI開発から自然療法、宇宙教育まで<br>
+            多様な事業を展開しています。
+          </p>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__title">Site Map</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">ホーム</a></li>
+            <li><a href="business.html" class="footer__link">事業内容</a></li>
+            <li><a href="company.html" class="footer__link">会社概要</a></li>
+            <li><a href="contact.html" class="footer__link">お問い合わせ</a></li>
+            <li><a href="news.html" class="footer__link">お知らせ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__title">Business</h3>
+          <ul class="footer__links">
+            <li><a href="business.html#herb" class="footer__link">自然療法・ハーブ</a></li>
+            <li><a href="business.html#cosmetics" class="footer__link">化粧品・スキンケア</a></li>
+            <li><a href="business.html#education" class="footer__link">宇宙・科学教育</a></li>
+            <li><a href="business.html#marketing" class="footer__link">広告・マーケティング</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__title">Follow Us</h3>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Twitter">
+              <span aria-hidden="true">𝕏</span>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <span aria-hidden="true">📷</span>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">
+              <span aria-hidden="true">in</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2024 Space Lab LLC. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link">プライバシーポリシー</a>
+          <a href="#" class="footer__legal-link">利用規約</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+

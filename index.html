@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="合同会社Space Lab - 先端科学技術と自然の調和をテーマに、AI開発、自然療法、宇宙教育など多様な事業を展開。宇宙と自然の調和から、未来を創造します。">
-  
+
   <!-- OGP設定 -->
   <meta property="og:title" content="合同会社Space Lab | 宇宙と自然の調和から、未来を創造する">
   <meta property="og:description" content="先端科学技術と自然の調和をテーマに、AI開発、自然療法、宇宙教育など多様な事業を展開しています。">
@@ -13,22 +14,24 @@
   <meta property="og:image" content="https://spacelab.co.jp/images/ogp.jpg">
   <meta property="og:site_name" content="合同会社Space Lab">
   <meta property="og:locale" content="ja_JP">
-  
+
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="合同会社Space Lab | 宇宙と自然の調和から、未来を創造する">
   <meta name="twitter:description" content="先端科学技術と自然の調和をテーマに、AI開発、自然療法、宇宙教育など多様な事業を展開しています。">
-  
+
   <title>合同会社Space Lab | 宇宙と自然の調和から、未来を創造する</title>
-  
+
   <!-- ファビコン（プレースホルダー） -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%230A0E27' stroke='%234A9EFF' stroke-width='4'/><circle cx='50' cy='50' r='15' fill='%234A9EFF'/></svg>">
-  
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%230A0E27' stroke='%234A9EFF' stroke-width='4'/><circle cx='50' cy='50' r='15' fill='%234A9EFF'/></svg>">
+
   <!-- CSS読み込み -->
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
   <!-- ローディング画面 -->
   <div class="loading-screen" id="loading" aria-hidden="true">
@@ -52,17 +55,18 @@
       <a href="index.html" class="header__logo" aria-label="Space Lab ホーム">
         <img src="images/logo.jpeg" alt="Space Lab" class="header__logo-img">
       </a>
-      
+
       <!-- デスクトップナビゲーション -->
       <nav class="nav" role="navigation" aria-label="メインナビゲーション">
         <ul class="nav__list">
           <li><a href="index.html" class="nav__link active">Home</a></li>
           <li><a href="business.html" class="nav__link">Business</a></li>
           <li><a href="company.html" class="nav__link">Company</a></li>
+          <li><a href="news.html" class="nav__link">News</a></li>
           <li><a href="contact.html" class="nav__link">Contact</a></li>
         </ul>
       </nav>
-      
+
       <!-- ハンバーガーメニュー -->
       <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-nav">
         <span class="hamburger__line"></span>
@@ -79,22 +83,23 @@
       <li><a href="index.html" class="mobile-nav__link active">Home</a></li>
       <li><a href="business.html" class="mobile-nav__link">Business</a></li>
       <li><a href="company.html" class="mobile-nav__link">Company</a></li>
+      <li><a href="news.html" class="mobile-nav__link">News</a></li>
       <li><a href="contact.html" class="mobile-nav__link">Contact</a></li>
     </ul>
   </nav>
 
   <!-- メインコンテンツ -->
   <main class="main" id="main" role="main">
-    
+
     <!-- ヒーローセクション -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__bg" aria-hidden="true"></div>
       <div class="hero__content">
         <h1 class="hero__title" id="hero-title">
-          宇宙と自然の調和から、<br>未来を創造する
+          宇宙と自然の調和から<br>未来を創造する
         </h1>
         <p class="hero__subtitle">
-          先端技術と自然の叡智を融合し、<br>
+          先端技術と自然の叡智を融合し<br>
           持続可能な未来を実現します
         </p>
         <div class="hero__cta">
@@ -113,11 +118,20 @@
             科学技術と自然の融合で、新しい価値を創造する5つの事業領域
           </p>
         </header>
-        
+
         <div class="business-grid">
           <!-- 自然療法・ハーブ事業 -->
-          <article class="business-card fade-in delay-2">
-            <div class="business-card__icon" aria-hidden="true">🌿</div>
+          <article class="business-card fade-in delay-1">
+            <div class="business-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.9 0 1.8-.1 2.6-.3" />
+                <path d="M12 2c3 3 4 7.5 2.5 11.5" />
+                <path d="M15 7c2 0 4 1 5.5 2.5S23 13 23 15c-2 0-4-1-5.5-2.5" />
+                <path d="M18.5 12.5c1 2 1.5 4 1.5 6-2 0-4-.5-6-1.5" />
+                <path d="M12 22V12" />
+                <path d="M7 8c0-1.5.5-3 2-4s3-1.5 4-1" />
+              </svg>
+            </div>
             <h3 class="business-card__title">自然療法・ハーブ</h3>
             <p class="business-card__text">
               自然の恵みを活かした療法やハーブ製品の研究・開発を行い、
@@ -129,8 +143,19 @@
           </article>
 
           <!-- 化粧品・スキンケア事業 -->
-          <article class="business-card fade-in delay-3">
-            <div class="business-card__icon" aria-hidden="true">✨</div>
+          <article class="business-card fade-in delay-2">
+            <div class="business-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 2h6l1 7H8L9 2z" />
+                <path d="M8 9h8v2a6 6 0 01-6 6H10a6 6 0 01-6-6h4z" />
+                <path d="M10 17v5" />
+                <path d="M14 17v5" />
+                <path d="M8 22h8" />
+                <circle cx="17" cy="4" r="1.5" />
+                <circle cx="20" cy="7" r="1" />
+                <circle cx="19" cy="11" r="1.5" />
+              </svg>
+            </div>
             <h3 class="business-card__title">化粧品・スキンケア</h3>
             <p class="business-card__text">
               自然由来成分を活用した化粧品・スキンケア製品の企画・製造・販売を通じて、
@@ -142,8 +167,15 @@
           </article>
 
           <!-- 宇宙・科学教育事業 -->
-          <article class="business-card fade-in delay-4">
-            <div class="business-card__icon" aria-hidden="true">🔭</div>
+          <article class="business-card fade-in delay-3">
+            <div class="business-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="3" />
+                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(0)" />
+                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)" />
+                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)" />
+              </svg>
+            </div>
             <h3 class="business-card__title">宇宙・科学教育</h3>
             <p class="business-card__text">
               宇宙や天文学、科学の魅力を伝えるワークショップや教材制作を通じて、
@@ -155,8 +187,15 @@
           </article>
 
           <!-- 広告・マーケティング事業 -->
-          <article class="business-card fade-in delay-5">
-            <div class="business-card__icon" aria-hidden="true">📣</div>
+          <article class="business-card fade-in delay-4">
+            <div class="business-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 3v18h18" />
+                <path d="M7 16l4-4 4 4 5-6" />
+                <circle cx="20" cy="10" r="2" />
+                <path d="M18.5 8.5L20 7" />
+              </svg>
+            </div>
             <h3 class="business-card__title">広告・マーケティング</h3>
             <p class="business-card__text">
               クリエイティブな広告企画と戦略的マーケティングで、
@@ -196,20 +235,24 @@
           <h2 class="section-header__title" id="news-title">News</h2>
           <p class="section-header__subtitle">最新のお知らせ・実績</p>
         </header>
-        
+
         <div class="news__list">
-          <a href="#" class="news__item fade-in delay-1">
+          <a href="news.html" class="news__item fade-in delay-1">
             <time class="news__date" datetime="2024-12-20">2024.12.20</time>
             <span class="news__title">ウェブサイトをリニューアルしました</span>
           </a>
-          <a href="#" class="news__item fade-in delay-2">
+          <a href="news.html" class="news__item fade-in delay-2">
             <time class="news__date" datetime="2024-12-15">2024.12.15</time>
             <span class="news__title">年末年始の営業についてのお知らせ</span>
           </a>
-          <a href="#" class="news__item fade-in delay-3">
+          <a href="news.html" class="news__item fade-in delay-3">
             <time class="news__date" datetime="2024-12-01">2024.12.01</time>
             <span class="news__title">新しい宇宙科学ワークショップの開催が決定しました</span>
           </a>
+        </div>
+
+        <div class="text-center mt-6 fade-in delay-4">
+          <a href="news.html" class="btn btn--secondary">お知らせ一覧を見る</a>
         </div>
       </div>
     </section>
@@ -299,5 +342,5 @@
   <!-- JavaScript読み込み -->
   <script src="js/main.js"></script>
 </body>
-</html>
 
+</html>
