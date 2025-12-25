@@ -813,9 +813,9 @@ body {
 
 .hero__title {
   font-family: 'Oradano Mincho GSRR', serif;
-  font-size: var(--text-3xl);
+  font-size: 1.5rem;
   font-weight: var(--font-normal);
-  line-height: 1.5;
+  line-height: 1.6;
   margin-bottom: var(--space-5);
   background: var(--gradient-accent);
   -webkit-background-clip: text;
