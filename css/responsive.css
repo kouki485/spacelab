@@ -206,6 +206,7 @@
   /* 事業グリッド */
   .business-grid {
     grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
   }
 
   /* フッター */
@@ -238,14 +239,16 @@
    大画面（1280px以上）
    ======================================== */
 @media (min-width: 1280px) {
-  /* 事業グリッド */
+  /* 事業グリッド - 4カード中央配置 */
   .business-grid {
-    grid-template-columns: repeat(5, 1fr);
-    gap: var(--space-5);
+    grid-template-columns: repeat(4, 280px);
+    gap: var(--space-6);
+    justify-content: center;
   }
 
   .business-card {
     padding: var(--space-5);
+    width: 100%;
   }
 
   /* 事業詳細 */
