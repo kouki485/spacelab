@@ -6,7 +6,7 @@
 /* ========================================
    Google Fonts読み込み
    ======================================== */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&family=Oradano+Mincho+GSRR&display=swap');
 
 /* ========================================
    リセットと基本スタイル
@@ -812,15 +812,16 @@ body {
 }
 
 .hero__title {
-  font-family: var(--font-heading);
+  font-family: 'Oradano Mincho GSRR', serif;
   font-size: var(--text-3xl);
-  font-weight: var(--font-bold);
-  line-height: var(--leading-tight);
+  font-weight: var(--font-normal);
+  line-height: 1.5;
   margin-bottom: var(--space-5);
   background: var(--gradient-accent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  letter-spacing: 0.05em;
 }
 
 .hero__subtitle {
