@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="合同会社Space Labへのお問い合わせ - AI・先端技術、自然療法、化粧品、宇宙教育、広告マーケティングに関するご相談を承ります。">
+  
+  <!-- OGP設定 -->
+  <meta property="og:title" content="お問い合わせ | 合同会社Space Lab">
+  <meta property="og:description" content="AI・先端技術、自然療法、化粧品、宇宙教育、広告マーケティングに関するご相談を承ります。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://spacelab.co.jp/contact.html">
+  <meta property="og:image" content="https://spacelab.co.jp/images/ogp-contact.jpg">
+  <meta property="og:site_name" content="合同会社Space Lab">
+  
+  <title>お問い合わせ | 合同会社Space Lab</title>
+  
+  <!-- ファビコン -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%230A0E27' stroke='%234A9EFF' stroke-width='4'/><circle cx='50' cy='50' r='15' fill='%234A9EFF'/></svg>">
+  
+  <!-- CSS読み込み -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- ローディング画面 -->
+  <div class="loading-screen" id="loading" aria-hidden="true">
+    <div class="loading-content">
+      <div class="loading-orbit">
+        <div class="loading-sun"></div>
+        <div class="loading-planet"></div>
+        <div class="loading-planet loading-planet-2"></div>
+      </div>
+      <p class="loading-text">Loading...</p>
+    </div>
+  </div>
+
+  <!-- 星空背景 -->
+  <div class="stars-container" id="stars" aria-hidden="true"></div>
+
+  <!-- ヘッダー -->
+  <header class="header" id="header" role="banner">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo" aria-label="Space Lab ホーム">
+        <span class="header__logo-icon" aria-hidden="true"></span>
+        <span class="header__logo-text">Space Lab</span>
+      </a>
+      
+      <nav class="nav" role="navigation" aria-label="メインナビゲーション">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="business.html" class="nav__link">Business</a></li>
+          <li><a href="company.html" class="nav__link">Company</a></li>
+          <li><a href="contact.html" class="nav__link active">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-nav">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- モバイルナビゲーション -->
+  <div class="mobile-nav__overlay" id="mobile-nav-overlay" aria-hidden="true"></div>
+  <nav class="mobile-nav" id="mobile-nav" role="navigation" aria-label="モバイルナビゲーション">
+    <ul class="mobile-nav__list">
+      <li><a href="index.html" class="mobile-nav__link">Home</a></li>
+      <li><a href="business.html" class="mobile-nav__link">Business</a></li>
+      <li><a href="company.html" class="mobile-nav__link">Company</a></li>
+      <li><a href="contact.html" class="mobile-nav__link active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- メインコンテンツ -->
+  <main class="main" id="main" role="main">
+    
+    <!-- ページヘッダー -->
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-header__title fade-in">Contact</h1>
+        <p class="page-header__subtitle fade-in delay-1">お問い合わせ</p>
+      </div>
+    </section>
+
+    <!-- お問い合わせセクション -->
+    <section class="section" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-section">
+          
+          <!-- お問い合わせ情報 -->
+          <div class="contact-info fade-in">
+            <h2 class="sr-only" id="contact-title">お問い合わせ方法</h2>
+            
+            <div class="contact-info__item">
+              <div class="contact-info__icon" aria-hidden="true">📧</div>
+              <div class="contact-info__content">
+                <p class="contact-info__label">メール</p>
+                <p class="contact-info__value">info@spacelab.co.jp</p>
+              </div>
+            </div>
+            
+            <div class="contact-info__item">
+              <div class="contact-info__icon" aria-hidden="true">📍</div>
+              <div class="contact-info__content">
+                <p class="contact-info__label">所在地</p>
+                <p class="contact-info__value">〒107-0052<br>東京都港区赤坂４丁目８−１９ 3階</p>
+              </div>
+            </div>
+            
+            <div class="contact-info__item">
+              <div class="contact-info__icon" aria-hidden="true">⏰</div>
+              <div class="contact-info__content">
+                <p class="contact-info__label">営業時間</p>
+                <p class="contact-info__value">平日 9:00 - 18:00<br>（土日祝日休業）</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- お問い合わせフォーム -->
+          <div class="contact-form fade-in delay-1">
+            <form class="form" id="contact-form" novalidate>
+              
+              <!-- お名前 -->
+              <div class="form__row">
+                <div class="form__group" data-validate="required">
+                  <label class="form__label" for="lastName">
+                    姓
+                    <span class="form__required">必須</span>
+                  </label>
+                  <input type="text" 
+                         id="lastName" 
+                         name="lastName" 
+                         class="form__input" 
+                         placeholder="例：山田"
+                         required
+                         aria-describedby="lastName-error">
+                  <span class="form__error" id="lastName-error" role="alert">姓を入力してください</span>
+                </div>
+                
+                <div class="form__group" data-validate="required">
+                  <label class="form__label" for="firstName">
+                    名
+                    <span class="form__required">必須</span>
+                  </label>
+                  <input type="text" 
+                         id="firstName" 
+                         name="firstName" 
+                         class="form__input" 
+                         placeholder="例：太郎"
+                         required
+                         aria-describedby="firstName-error">
+                  <span class="form__error" id="firstName-error" role="alert">名を入力してください</span>
+                </div>
+              </div>
+
+              <!-- 会社名 -->
+              <div class="form__group" data-validate="required">
+                <label class="form__label" for="company">
+                  会社名・団体名
+                  <span class="form__required">必須</span>
+                </label>
+                <input type="text" 
+                       id="company" 
+                       name="company" 
+                       class="form__input" 
+                       placeholder="例：株式会社〇〇"
+                       required
+                       aria-describedby="company-error">
+                <span class="form__error" id="company-error" role="alert">会社名・団体名を入力してください</span>
+              </div>
+
+              <!-- メールアドレス -->
+              <div class="form__group" data-validate="email">
+                <label class="form__label" for="email">
+                  メールアドレス
+                  <span class="form__required">必須</span>
+                </label>
+                <input type="email" 
+                       id="email" 
+                       name="email" 
+                       class="form__input" 
+                       placeholder="例：example@mail.com"
+                       required
+                       aria-describedby="email-error">
+                <span class="form__error" id="email-error" role="alert">正しいメールアドレスを入力してください</span>
+              </div>
+
+              <!-- 電話番号 -->
+              <div class="form__group" data-validate="tel">
+                <label class="form__label" for="phone">
+                  電話番号
+                  <span class="form__required">必須</span>
+                </label>
+                <input type="tel" 
+                       id="phone" 
+                       name="phone" 
+                       class="form__input" 
+                       placeholder="例：03-1234-5678"
+                       required
+                       aria-describedby="phone-error">
+                <span class="form__error" id="phone-error" role="alert">電話番号を入力してください</span>
+              </div>
+
+              <!-- お問い合わせ種別 -->
+              <div class="form__group" data-validate="required">
+                <label class="form__label" for="category">
+                  お問い合わせ種別
+                  <span class="form__required">必須</span>
+                </label>
+                <select id="category" 
+                        name="category" 
+                        class="form__select" 
+                        required
+                        aria-describedby="category-error">
+                  <option value="">選択してください</option>
+                  <option value="ai">AI・先端技術について</option>
+                  <option value="herb">自然療法・ハーブ製品について</option>
+                  <option value="cosmetics">化粧品・スキンケアについて</option>
+                  <option value="education">宇宙・科学教育について</option>
+                  <option value="marketing">広告・マーケティングについて</option>
+                  <option value="other">その他</option>
+                </select>
+                <span class="form__error" id="category-error" role="alert">お問い合わせ種別を選択してください</span>
+              </div>
+
+              <!-- 希望連絡方法 -->
+              <div class="form__group">
+                <span class="form__label">希望連絡方法</span>
+                <div class="form__radio-group">
+                  <label class="form__radio">
+                    <input type="radio" name="contactMethod" value="email" checked>
+                    <span>メール</span>
+                  </label>
+                  <label class="form__radio">
+                    <input type="radio" name="contactMethod" value="phone">
+                    <span>電話</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- 希望連絡時間帯 -->
+              <div class="form__group">
+                <label class="form__label" for="preferredTime">
+                  希望連絡時間帯
+                </label>
+                <select id="preferredTime" name="preferredTime" class="form__select">
+                  <option value="">選択してください（任意）</option>
+                  <option value="morning">午前（10:00〜12:00）</option>
+                  <option value="afternoon">午後（13:00〜15:00）</option>
+                  <option value="evening">夕方（15:00〜18:00）</option>
+                  <option value="anytime">いつでも可</option>
+                </select>
+              </div>
+
+              <!-- お問い合わせ内容 -->
+              <div class="form__group" data-validate="required">
+                <label class="form__label" for="message">
+                  お問い合わせ内容
+                  <span class="form__required">必須</span>
+                </label>
+                <textarea id="message" 
+                          name="message" 
+                          class="form__textarea" 
+                          placeholder="お問い合わせ内容をご記入ください（2000文字以内）"
+                          required
+                          maxlength="2000"
+                          aria-describedby="message-error message-count"></textarea>
+                <span class="form__error" id="message-error" role="alert">お問い合わせ内容を入力してください</span>
+                <span class="form__note" id="message-count">0 / 2000文字</span>
+              </div>
+
+              <!-- プライバシーポリシー同意 -->
+              <div class="form__group" data-validate="checkbox">
+                <label class="form__checkbox">
+                  <input type="checkbox" name="privacy" required aria-describedby="privacy-error">
+                  <span><a href="#" target="_blank">プライバシーポリシー</a>に同意する</span>
+                </label>
+                <span class="form__error" id="privacy-error" role="alert">プライバシーポリシーに同意してください</span>
+              </div>
+
+              <!-- 送信ボタン -->
+              <div class="form__submit">
+                <button type="submit" class="btn btn--primary btn--large" id="submit-btn">
+                  <span class="btn__text">送信する</span>
+                  <span class="btn__loading" aria-hidden="true" style="display: none;">送信中...</span>
+                </button>
+              </div>
+
+            </form>
+
+            <!-- サンクスメッセージ -->
+            <div class="thanks-message" id="thanks-message">
+              <div class="thanks-message__icon" aria-hidden="true">✅</div>
+              <h3 class="thanks-message__title">お問い合わせありがとうございます</h3>
+              <p class="thanks-message__text">
+                お問い合わせを受け付けました。<br>
+                3営業日以内にご連絡いたします。<br>
+                しばらくお待ちください。
+              </p>
+              <a href="index.html" class="btn btn--secondary">トップページに戻る</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__section">
+          <a href="index.html" class="footer__logo" aria-label="Space Lab ホーム">
+            <span class="footer__logo-icon" aria-hidden="true"></span>
+            <span class="footer__logo-text">Space Lab</span>
+          </a>
+          <p class="footer__description">
+            先端科学技術と自然の調和をテーマに、<br>
+            AI開発から自然療法、宇宙教育まで<br>
+            多様な事業を展開しています。
+          </p>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__title">Site Map</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">ホーム</a></li>
+            <li><a href="business.html" class="footer__link">事業内容</a></li>
+            <li><a href="company.html" class="footer__link">会社概要</a></li>
+            <li><a href="contact.html" class="footer__link">お問い合わせ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__title">Business</h3>
+          <ul class="footer__links">
+            <li><a href="business.html#ai" class="footer__link">AI・先端技術</a></li>
+            <li><a href="business.html#herb" class="footer__link">自然療法・ハーブ</a></li>
+            <li><a href="business.html#cosmetics" class="footer__link">化粧品・スキンケア</a></li>
+            <li><a href="business.html#education" class="footer__link">宇宙・科学教育</a></li>
+            <li><a href="business.html#marketing" class="footer__link">広告・マーケティング</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__title">Follow Us</h3>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Twitter">
+              <span aria-hidden="true">𝕏</span>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <span aria-hidden="true">📷</span>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">
+              <span aria-hidden="true">in</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2024 Space Lab LLC. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link">プライバシーポリシー</a>
+          <a href="#" class="footer__legal-link">利用規約</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/form-validation.js"></script>
+</body>
+</html>
+

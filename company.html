@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="合同会社Space Labの会社概要 - 先端科学技術と自然の調和をコンセプトに、革新的なソリューションを提供する企業です。">
+  
+  <!-- OGP設定 -->
+  <meta property="og:title" content="会社概要 | 合同会社Space Lab">
+  <meta property="og:description" content="先端科学技術と自然の調和をコンセプトに、革新的なソリューションを提供する企業です。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://spacelab.co.jp/company.html">
+  <meta property="og:image" content="https://spacelab.co.jp/images/ogp-company.jpg">
+  <meta property="og:site_name" content="合同会社Space Lab">
+  
+  <title>会社概要 | 合同会社Space Lab</title>
+  
+  <!-- ファビコン -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%230A0E27' stroke='%234A9EFF' stroke-width='4'/><circle cx='50' cy='50' r='15' fill='%234A9EFF'/></svg>">
+  
+  <!-- CSS読み込み -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- ローディング画面 -->
+  <div class="loading-screen" id="loading" aria-hidden="true">
+    <div class="loading-content">
+      <div class="loading-orbit">
+        <div class="loading-sun"></div>
+        <div class="loading-planet"></div>
+        <div class="loading-planet loading-planet-2"></div>
+      </div>
+      <p class="loading-text">Loading...</p>
+    </div>
+  </div>
+
+  <!-- 星空背景 -->
+  <div class="stars-container" id="stars" aria-hidden="true"></div>
+
+  <!-- ヘッダー -->
+  <header class="header" id="header" role="banner">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo" aria-label="Space Lab ホーム">
+        <span class="header__logo-icon" aria-hidden="true"></span>
+        <span class="header__logo-text">Space Lab</span>
+      </a>
+      
+      <nav class="nav" role="navigation" aria-label="メインナビゲーション">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="business.html" class="nav__link">Business</a></li>
+          <li><a href="company.html" class="nav__link active">Company</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-nav">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- モバイルナビゲーション -->
+  <div class="mobile-nav__overlay" id="mobile-nav-overlay" aria-hidden="true"></div>
+  <nav class="mobile-nav" id="mobile-nav" role="navigation" aria-label="モバイルナビゲーション">
+    <ul class="mobile-nav__list">
+      <li><a href="index.html" class="mobile-nav__link">Home</a></li>
+      <li><a href="business.html" class="mobile-nav__link">Business</a></li>
+      <li><a href="company.html" class="mobile-nav__link active">Company</a></li>
+      <li><a href="contact.html" class="mobile-nav__link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- メインコンテンツ -->
+  <main class="main" id="main" role="main">
+    
+    <!-- ページヘッダー -->
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-header__title fade-in">Company</h1>
+        <p class="page-header__subtitle fade-in delay-1">会社概要</p>
+      </div>
+    </section>
+
+    <!-- 会社情報セクション -->
+    <section class="section" aria-labelledby="info-title">
+      <div class="container">
+        <header class="section-header fade-in">
+          <h2 class="section-header__title" id="info-title">会社情報</h2>
+          <p class="section-header__subtitle">Company Information</p>
+        </header>
+        
+        <div class="company-info fade-in">
+          <dl class="company-info__table">
+            <div class="company-info__row">
+              <dt class="company-info__label">会社名</dt>
+              <dd class="company-info__value">合同会社Space Lab</dd>
+            </div>
+            <div class="company-info__row">
+              <dt class="company-info__label">設立</dt>
+              <dd class="company-info__value">2026年 1月</dd>
+            </div>
+            <div class="company-info__row">
+              <dt class="company-info__label">代表者</dt>
+              <dd class="company-info__value">木村優也</dd>
+            </div>
+            <div class="company-info__row">
+              <dt class="company-info__label">所在地</dt>
+              <dd class="company-info__value">〒107-0052 東京都港区赤坂４丁目８−１９ 3階</dd>
+            </div>
+            <div class="company-info__row">
+              <dt class="company-info__label">資本金</dt>
+              <dd class="company-info__value">100万円</dd>
+            </div>
+            <div class="company-info__row">
+              <dt class="company-info__label">事業内容</dt>
+              <dd class="company-info__value">
+                1. 人工知能（AI）その他先端技術に関する研究、開発、設計、運用、教育及びコンサルティング業務<br>
+                2. 自然療法、ハーブ、植物抽出成分等に関する研究、企画、製造、販売及び関連商品の開発<br>
+                3. 化粧品、香料、石鹸、スキンケア製品等の企画、製造、販売及び輸出入<br>
+                4. 宇宙、天文学、科学教育に関するワークショップ、講演、教材制作及び教育支援サービス<br>
+                5. 広告、宣伝、販売促進に関する企画、制作、運営、コンサルティング並びに広告代理業
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- 企業理念・ビジョン -->
+    <section class="section philosophy" aria-labelledby="vision-title">
+      <div class="container">
+        <header class="section-header fade-in">
+          <h2 class="section-header__title" id="vision-title">企業理念・ビジョン</h2>
+          <p class="section-header__subtitle">Mission / Vision / Values</p>
+        </header>
+        
+        <div class="vision-cards">
+          <!-- ミッション -->
+          <article class="vision-card fade-in delay-1">
+            <div class="vision-card__icon" aria-hidden="true">🎯</div>
+            <h3 class="vision-card__title">Mission</h3>
+            <p class="vision-card__text">
+              先端科学技術と自然の叡智を融合し、人々の暮らしと地球環境の調和を実現する革新的なソリューションを創造します。
+              テクノロジーの力で社会課題を解決しながら、自然との共生を追求します。
+            </p>
+          </article>
+
+          <!-- ビジョン -->
+          <article class="vision-card fade-in delay-2">
+            <div class="vision-card__icon" aria-hidden="true">🌟</div>
+            <h3 class="vision-card__title">Vision</h3>
+            <p class="vision-card__text">
+              宇宙規模の視野を持ち、自然の循環に学びながら、持続可能な未来社会の実現に貢献するグローバル企業となることを目指します。
+              次世代に誇れる地球と社会を残します。
+            </p>
+          </article>
+
+          <!-- バリュー -->
+          <article class="vision-card fade-in delay-3">
+            <div class="vision-card__icon" aria-hidden="true">💎</div>
+            <h3 class="vision-card__title">Values</h3>
+            <p class="vision-card__text">
+              Innovation（革新）、Harmony（調和）、Sustainability（持続可能性）、Curiosity（探究心）、Integrity（誠実さ）の5つの価値観を大切にしています。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- バリュー詳細 -->
+    <section class="section" aria-labelledby="values-title">
+      <div class="container">
+        <header class="section-header fade-in">
+          <h2 class="section-header__title" id="values-title">Our Values</h2>
+          <p class="section-header__subtitle">私たちが大切にする価値観</p>
+        </header>
+        
+        <div class="values">
+          <div class="value-item fade-in delay-1">
+            <span class="value-item__number">01</span>
+            <div class="value-item__content">
+              <h3 class="value-item__title">Innovation - 革新</h3>
+              <p class="value-item__text">常に新しい可能性を追求し、既存の枠にとらわれない発想で価値を創造します。</p>
+            </div>
+          </div>
+          
+          <div class="value-item fade-in delay-2">
+            <span class="value-item__number">02</span>
+            <div class="value-item__content">
+              <h3 class="value-item__title">Harmony - 調和</h3>
+              <p class="value-item__text">テクノロジーと自然、人と環境、伝統と革新のバランスを大切にします。</p>
+            </div>
+          </div>
+          
+          <div class="value-item fade-in delay-3">
+            <span class="value-item__number">03</span>
+            <div class="value-item__content">
+              <h3 class="value-item__title">Sustainability - 持続可能性</h3>
+              <p class="value-item__text">短期的な利益だけでなく、長期的な視点で社会と環境への影響を考慮します。</p>
+            </div>
+          </div>
+          
+          <div class="value-item fade-in delay-4">
+            <span class="value-item__number">04</span>
+            <div class="value-item__content">
+              <h3 class="value-item__title">Curiosity - 探究心</h3>
+              <p class="value-item__text">宇宙から微生物まで、あらゆる領域に対する好奇心と学びの姿勢を持ち続けます。</p>
+            </div>
+          </div>
+          
+          <div class="value-item fade-in delay-5">
+            <span class="value-item__number">05</span>
+            <div class="value-item__content">
+              <h3 class="value-item__title">Integrity - 誠実さ</h3>
+              <p class="value-item__text">お客様、パートナー、社会に対して誠実に向き合い、信頼を築きます。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 沿革 -->
+    <section class="section" aria-labelledby="history-title">
+      <div class="container">
+        <header class="section-header fade-in">
+          <h2 class="section-header__title" id="history-title">History</h2>
+          <p class="section-header__subtitle">沿革</p>
+        </header>
+        
+        <div class="timeline fade-in">
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <time class="timeline__date">20XX年 X月</time>
+            <p class="timeline__content">合同会社Space Lab 設立</p>
+          </div>
+          
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <time class="timeline__date">20XX年 X月</time>
+            <p class="timeline__content">AI・先端技術事業を開始</p>
+          </div>
+          
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <time class="timeline__date">20XX年 X月</time>
+            <p class="timeline__content">自然療法・ハーブ事業部門を新設</p>
+          </div>
+          
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <time class="timeline__date">20XX年 X月</time>
+            <p class="timeline__content">化粧品・スキンケア事業を開始</p>
+          </div>
+          
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <time class="timeline__date">20XX年 X月</time>
+            <p class="timeline__content">宇宙・科学教育事業を開始、ウェブサイトリニューアル</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTAセクション -->
+    <section class="section cta-section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="fade-in">
+          <h2 class="cta-section__title" id="cta-title">お気軽にお問い合わせください</h2>
+          <p class="cta-section__text">
+            事業に関するご相談、取材・講演依頼など、<br>
+            お気軽にお問い合わせください。
+          </p>
+          <a href="contact.html" class="btn btn--primary btn--large">お問い合わせはこちら</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__section">
+          <a href="index.html" class="footer__logo" aria-label="Space Lab ホーム">
+            <span class="footer__logo-icon" aria-hidden="true"></span>
+            <span class="footer__logo-text">Space Lab</span>
+          </a>
+          <p class="footer__description">
+            先端科学技術と自然の調和をテーマに、<br>
+            AI開発から自然療法、宇宙教育まで<br>
+            多様な事業を展開しています。
+          </p>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__title">Site Map</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">ホーム</a></li>
+            <li><a href="business.html" class="footer__link">事業内容</a></li>
+            <li><a href="company.html" class="footer__link">会社概要</a></li>
+            <li><a href="contact.html" class="footer__link">お問い合わせ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__title">Business</h3>
+          <ul class="footer__links">
+            <li><a href="business.html#ai" class="footer__link">AI・先端技術</a></li>
+            <li><a href="business.html#herb" class="footer__link">自然療法・ハーブ</a></li>
+            <li><a href="business.html#cosmetics" class="footer__link">化粧品・スキンケア</a></li>
+            <li><a href="business.html#education" class="footer__link">宇宙・科学教育</a></li>
+            <li><a href="business.html#marketing" class="footer__link">広告・マーケティング</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__title">Follow Us</h3>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Twitter">
+              <span aria-hidden="true">𝕏</span>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <span aria-hidden="true">📷</span>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">
+              <span aria-hidden="true">in</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2024 Space Lab LLC. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link">プライバシーポリシー</a>
+          <a href="#" class="footer__legal-link">利用規約</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+

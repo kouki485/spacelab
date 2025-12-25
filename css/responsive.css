@@ -1,0 +1,330 @@
+/* ==========================================================================
+   レスポンシブCSS - 合同会社Space Lab
+   モバイルファースト設計
+   ========================================================================== */
+
+/* ========================================
+   タブレット（768px以上）
+   ======================================== */
+@media (min-width: 768px) {
+  /* 基本設定 */
+  :root {
+    --container-padding: var(--space-6);
+  }
+
+  /* ヘッダー */
+  .header {
+    height: var(--header-height);
+  }
+
+  .header__logo-text {
+    font-size: var(--text-xl);
+  }
+
+  /* メインコンテンツ */
+  .main {
+    padding-top: var(--header-height);
+  }
+
+  /* ヒーロー */
+  .hero {
+    min-height: calc(100vh - var(--header-height));
+    padding: var(--space-10) var(--container-padding);
+  }
+
+  .hero__title {
+    font-size: var(--text-4xl);
+  }
+
+  .hero__subtitle {
+    font-size: var(--text-xl);
+  }
+
+  .hero__cta {
+    flex-direction: row;
+  }
+
+  /* セクションヘッダー */
+  .section-header__title {
+    font-size: var(--text-3xl);
+  }
+
+  /* カードグリッド */
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* 事業グリッド */
+  .business-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+
+  /* 哲学セクション */
+  .philosophy__quote {
+    font-size: var(--text-2xl);
+  }
+
+  /* ニュースリスト */
+  .news__item {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-5);
+  }
+
+  .news__date {
+    flex-shrink: 0;
+    width: 100px;
+  }
+
+  /* フッター */
+  .footer__inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* フォーム */
+  .form__row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ページヘッダー */
+  .page-header {
+    padding: var(--space-12) 0;
+  }
+
+  .page-header__title {
+    font-size: var(--text-4xl);
+  }
+
+  /* 事業詳細 */
+  .business-detail__inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-10);
+  }
+
+  .business-detail__content {
+    order: 1;
+  }
+
+  .business-detail__visual {
+    order: 2;
+  }
+
+  .business-detail:nth-child(even) .business-detail__content {
+    order: 2;
+  }
+
+  .business-detail:nth-child(even) .business-detail__visual {
+    order: 1;
+  }
+
+  .business-detail__image {
+    height: 300px;
+  }
+
+  .business-detail__icon {
+    width: 100px;
+    height: 100px;
+    font-size: var(--text-4xl);
+  }
+
+  .business-detail__title {
+    font-size: var(--text-2xl);
+  }
+
+  /* 会社情報テーブル */
+  .company-info__row {
+    flex-direction: row;
+    gap: var(--space-6);
+  }
+
+  .company-info__label {
+    flex-shrink: 0;
+    width: 150px;
+    margin-bottom: 0;
+  }
+
+  /* ビジョンカード */
+  .vision-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* バリュー */
+  .values {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* お問い合わせ */
+  .contact-section {
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-10);
+  }
+
+  /* 準備中ページ */
+  .coming-soon {
+    min-height: calc(100vh - var(--header-height) - 200px);
+  }
+
+  .coming-soon__title {
+    font-size: var(--text-3xl);
+  }
+}
+
+/* ========================================
+   デスクトップ（1024px以上）
+   ======================================== */
+@media (min-width: 1024px) {
+  /* ナビゲーション */
+  .nav {
+    display: flex;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .mobile-nav,
+  .mobile-nav__overlay {
+    display: none;
+  }
+
+  /* ヒーロー */
+  .hero__title {
+    font-size: var(--text-5xl);
+  }
+
+  /* カードグリッド */
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* 事業グリッド */
+  .business-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* フッター */
+  .footer__inner {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: var(--space-10);
+  }
+
+  /* 会社情報テーブル */
+  .company-info {
+    padding: var(--space-8);
+  }
+
+  .company-info__label {
+    width: 200px;
+  }
+
+  /* ビジョンカード */
+  .vision-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* バリュー */
+  .values {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ========================================
+   大画面（1280px以上）
+   ======================================== */
+@media (min-width: 1280px) {
+  /* 事業グリッド */
+  .business-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--space-5);
+  }
+
+  .business-card {
+    padding: var(--space-5);
+  }
+
+  /* 事業詳細 */
+  .business-detail__inner {
+    gap: var(--space-16);
+  }
+
+  .business-detail__image {
+    height: 350px;
+  }
+}
+
+/* ========================================
+   アニメーション軽減設定
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .fade-in-left,
+  .fade-in-right {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .star {
+    animation: none;
+    opacity: 0.5;
+  }
+
+  .loading-planet,
+  .loading-planet-2 {
+    animation: none;
+  }
+
+  .coming-soon__icon {
+    animation: none;
+  }
+
+  .business-card:hover,
+  .card:hover,
+  .vision-card:hover {
+    transform: none;
+  }
+
+  .btn--primary:hover,
+  .btn--secondary:hover {
+    transform: none;
+  }
+}
+
+/* ========================================
+   印刷用スタイル
+   ======================================== */
+@media print {
+  .header,
+  .footer,
+  .loading-screen,
+  .stars-container,
+  .mobile-nav,
+  .mobile-nav__overlay {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .main {
+    padding-top: 0;
+  }
+
+  .section {
+    page-break-inside: avoid;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+

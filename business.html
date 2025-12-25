@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="合同会社Space Labの事業内容 - AI・先端技術、自然療法・ハーブ、化粧品・スキンケア、宇宙・科学教育、広告・マーケティングの5つの事業領域で新しい価値を創造します。">
+  
+  <!-- OGP設定 -->
+  <meta property="og:title" content="事業内容 | 合同会社Space Lab">
+  <meta property="og:description" content="AI・先端技術から自然療法、宇宙教育まで、5つの事業領域で新しい価値を創造します。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://spacelab.co.jp/business.html">
+  <meta property="og:image" content="https://spacelab.co.jp/images/ogp-business.jpg">
+  <meta property="og:site_name" content="合同会社Space Lab">
+  
+  <title>事業内容 | 合同会社Space Lab</title>
+  
+  <!-- ファビコン -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%230A0E27' stroke='%234A9EFF' stroke-width='4'/><circle cx='50' cy='50' r='15' fill='%234A9EFF'/></svg>">
+  
+  <!-- CSS読み込み -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- ローディング画面 -->
+  <div class="loading-screen" id="loading" aria-hidden="true">
+    <div class="loading-content">
+      <div class="loading-orbit">
+        <div class="loading-sun"></div>
+        <div class="loading-planet"></div>
+        <div class="loading-planet loading-planet-2"></div>
+      </div>
+      <p class="loading-text">Loading...</p>
+    </div>
+  </div>
+
+  <!-- 星空背景 -->
+  <div class="stars-container" id="stars" aria-hidden="true"></div>
+
+  <!-- ヘッダー -->
+  <header class="header" id="header" role="banner">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo" aria-label="Space Lab ホーム">
+        <span class="header__logo-icon" aria-hidden="true"></span>
+        <span class="header__logo-text">Space Lab</span>
+      </a>
+      
+      <nav class="nav" role="navigation" aria-label="メインナビゲーション">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="business.html" class="nav__link active">Business</a></li>
+          <li><a href="company.html" class="nav__link">Company</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-nav">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- モバイルナビゲーション -->
+  <div class="mobile-nav__overlay" id="mobile-nav-overlay" aria-hidden="true"></div>
+  <nav class="mobile-nav" id="mobile-nav" role="navigation" aria-label="モバイルナビゲーション">
+    <ul class="mobile-nav__list">
+      <li><a href="index.html" class="mobile-nav__link">Home</a></li>
+      <li><a href="business.html" class="mobile-nav__link active">Business</a></li>
+      <li><a href="company.html" class="mobile-nav__link">Company</a></li>
+      <li><a href="contact.html" class="mobile-nav__link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- メインコンテンツ -->
+  <main class="main" id="main" role="main">
+    
+    <!-- ページヘッダー -->
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-header__title fade-in">Business</h1>
+        <p class="page-header__subtitle fade-in delay-1">事業内容</p>
+      </div>
+    </section>
+
+    <!-- AI・先端技術事業 -->
+    <section class="business-detail" id="ai" aria-labelledby="ai-title">
+      <div class="container">
+        <div class="business-detail__inner">
+          <div class="business-detail__content fade-in-left">
+            <div class="business-detail__icon" aria-hidden="true">🧠</div>
+            <h2 class="business-detail__title" id="ai-title">AI・先端技術事業</h2>
+            <p class="business-detail__text">
+              人工知能（AI）やその他先端技術に関する研究、開発、設計、運用、教育及びコンサルティング業務を行っています。
+              機械学習、ディープラーニング、自然言語処理など最新のAI技術を活用し、
+              お客様のビジネス課題を解決するソリューションを提供します。
+              技術導入から運用支援、人材育成まで、包括的にサポートいたします。
+            </p>
+            <ul class="business-detail__list">
+              <li class="business-detail__item">AI/機械学習モデルの研究開発・実装支援</li>
+              <li class="business-detail__item">業務プロセス自動化（RPA・AI統合）</li>
+              <li class="business-detail__item">データ分析・予測モデル構築</li>
+              <li class="business-detail__item">AI技術導入コンサルティング・教育研修</li>
+            </ul>
+          </div>
+          <div class="business-detail__visual fade-in-right">
+            <div class="business-detail__image">
+              <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop" 
+                   alt="AI技術のイメージ - ニューラルネットワークの可視化" 
+                   loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 自然療法・ハーブ事業 -->
+    <section class="business-detail" id="herb" aria-labelledby="herb-title">
+      <div class="container">
+        <div class="business-detail__inner">
+          <div class="business-detail__content fade-in-right">
+            <div class="business-detail__icon" aria-hidden="true">🌿</div>
+            <h2 class="business-detail__title" id="herb-title">自然療法・ハーブ事業</h2>
+            <p class="business-detail__text">
+              自然療法、ハーブ、植物抽出成分等に関する研究、企画、製造、販売及び関連商品の開発を手がけています。
+              古来より伝わる自然の叡智と現代科学を融合し、
+              心身の健康と調和を促進する製品とサービスを提供します。
+              サステナビリティを重視した原材料調達にも取り組んでいます。
+            </p>
+            <ul class="business-detail__list">
+              <li class="business-detail__item">オーガニックハーブ製品の企画・開発</li>
+              <li class="business-detail__item">植物エキス・精油の研究・製造</li>
+              <li class="business-detail__item">アロマセラピー関連商品の販売</li>
+              <li class="business-detail__item">自然療法に関するセミナー・講座運営</li>
+            </ul>
+          </div>
+          <div class="business-detail__visual fade-in-left">
+            <div class="business-detail__image">
+              <img src="https://images.unsplash.com/photo-1515023115689-589c33041d3c?w=600&h=400&fit=crop" 
+                   alt="自然療法のイメージ - ハーブと植物" 
+                   loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 化粧品・スキンケア事業 -->
+    <section class="business-detail" id="cosmetics" aria-labelledby="cosmetics-title">
+      <div class="container">
+        <div class="business-detail__inner">
+          <div class="business-detail__content fade-in-left">
+            <div class="business-detail__icon" aria-hidden="true">✨</div>
+            <h2 class="business-detail__title" id="cosmetics-title">化粧品・スキンケア事業</h2>
+            <p class="business-detail__text">
+              化粧品、香料、石鹸、スキンケア製品等の企画、製造、販売及び輸出入を行っています。
+              自然由来の成分を中心に、肌に優しく環境にも配慮した製品づくりを心がけています。
+              科学的なエビデンスに基づいた製品開発と、
+              お客様一人ひとりに合わせたパーソナライズドスキンケアの提案を行います。
+            </p>
+            <ul class="business-detail__list">
+              <li class="business-detail__item">ナチュラル・オーガニック化粧品の企画開発</li>
+              <li class="business-detail__item">スキンケア・ボディケア製品の製造販売</li>
+              <li class="business-detail__item">OEM/ODM受託製造</li>
+              <li class="business-detail__item">海外製品の輸入販売・国内製品の輸出</li>
+            </ul>
+          </div>
+          <div class="business-detail__visual fade-in-right">
+            <div class="business-detail__image">
+              <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&h=400&fit=crop" 
+                   alt="スキンケア製品のイメージ" 
+                   loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 宇宙・科学教育事業 -->
+    <section class="business-detail" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <div class="business-detail__inner">
+          <div class="business-detail__content fade-in-right">
+            <div class="business-detail__icon" aria-hidden="true">🔭</div>
+            <h2 class="business-detail__title" id="education-title">宇宙・科学教育事業</h2>
+            <p class="business-detail__text">
+              宇宙、天文学、科学教育に関するワークショップ、講演、教材制作及び教育支援サービスを提供しています。
+              子どもから大人まで、宇宙や科学の魅力を体験できるプログラムを企画・運営します。
+              最新の宇宙科学の知見を分かりやすく伝え、
+              次世代の科学者やイノベーターを育てる一助となることを目指しています。
+            </p>
+            <ul class="business-detail__list">
+              <li class="business-detail__item">天体観測・宇宙科学ワークショップの企画運営</li>
+              <li class="business-detail__item">学校・教育機関向け出張授業・講演</li>
+              <li class="business-detail__item">STEAM教育教材の開発・販売</li>
+              <li class="business-detail__item">プラネタリウム・科学館向けコンテンツ制作</li>
+            </ul>
+          </div>
+          <div class="business-detail__visual fade-in-left">
+            <div class="business-detail__image">
+              <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop" 
+                   alt="宇宙・科学教育のイメージ - 地球と宇宙" 
+                   loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 広告・マーケティング事業 -->
+    <section class="business-detail" id="marketing" aria-labelledby="marketing-title">
+      <div class="container">
+        <div class="business-detail__inner">
+          <div class="business-detail__content fade-in-left">
+            <div class="business-detail__icon" aria-hidden="true">📣</div>
+            <h2 class="business-detail__title" id="marketing-title">広告・マーケティング事業</h2>
+            <p class="business-detail__text">
+              広告、宣伝、販売促進に関する企画、制作、運営、コンサルティング並びに広告代理業を展開しています。
+              デジタルマーケティングからブランディング、クリエイティブ制作まで、
+              お客様のビジネス成長を総合的にサポートします。
+              データドリブンなアプローチと創造的な発想を組み合わせ、効果的な施策を実現します。
+            </p>
+            <ul class="business-detail__list">
+              <li class="business-detail__item">デジタルマーケティング戦略立案・実行支援</li>
+              <li class="business-detail__item">ブランディング・クリエイティブ制作</li>
+              <li class="business-detail__item">Web広告運用・SNSマーケティング</li>
+              <li class="business-detail__item">イベント企画・プロモーション運営</li>
+            </ul>
+          </div>
+          <div class="business-detail__visual fade-in-right">
+            <div class="business-detail__image">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" 
+                   alt="マーケティングのイメージ - データ分析" 
+                   loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTAセクション -->
+    <section class="section cta-section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="fade-in">
+          <h2 class="cta-section__title" id="cta-title">お気軽にご相談ください</h2>
+          <p class="cta-section__text">
+            各事業に関するお問い合わせ、ご相談は随時受け付けております。<br>
+            お客様のニーズに合わせた最適なソリューションをご提案いたします。
+          </p>
+          <a href="contact.html" class="btn btn--primary btn--large">お問い合わせはこちら</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__section">
+          <a href="index.html" class="footer__logo" aria-label="Space Lab ホーム">
+            <span class="footer__logo-icon" aria-hidden="true"></span>
+            <span class="footer__logo-text">Space Lab</span>
+          </a>
+          <p class="footer__description">
+            先端科学技術と自然の調和をテーマに、<br>
+            AI開発から自然療法、宇宙教育まで<br>
+            多様な事業を展開しています。
+          </p>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__title">Site Map</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">ホーム</a></li>
+            <li><a href="business.html" class="footer__link">事業内容</a></li>
+            <li><a href="company.html" class="footer__link">会社概要</a></li>
+            <li><a href="contact.html" class="footer__link">お問い合わせ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__title">Business</h3>
+          <ul class="footer__links">
+            <li><a href="#ai" class="footer__link">AI・先端技術</a></li>
+            <li><a href="#herb" class="footer__link">自然療法・ハーブ</a></li>
+            <li><a href="#cosmetics" class="footer__link">化粧品・スキンケア</a></li>
+            <li><a href="#education" class="footer__link">宇宙・科学教育</a></li>
+            <li><a href="#marketing" class="footer__link">広告・マーケティング</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__title">Follow Us</h3>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Twitter">
+              <span aria-hidden="true">𝕏</span>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <span aria-hidden="true">📷</span>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">
+              <span aria-hidden="true">in</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2024 Space Lab LLC. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link">プライバシーポリシー</a>
+          <a href="#" class="footer__legal-link">利用規約</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+

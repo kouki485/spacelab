@@ -1,0 +1,182 @@
+/* ==========================================================================
+   CSS変数定義 - 合同会社Space Lab
+   テーマ: Cosmic Nature - 宇宙と自然の調和
+   ========================================================================== */
+
+:root {
+    /* ========================================
+     メインカラー
+     ======================================== */
+    --color-primary: #0A0E27;
+    /* ディープスペースブルー */
+    --color-secondary: #1B4332;
+    /* フォレストグリーン */
+    --color-accent: #4A9EFF;
+    /* コズミックブルー */
+
+    /* ========================================
+     サブカラー
+     ======================================== */
+    --color-organic-green: #2D6A4F;
+    /* オーガニックグリーン */
+    --color-light-mint: #95D5B2;
+    /* ライトミント */
+    --color-mystic-purple: #B8A7E8;
+    /* ミスティックパープル */
+    --color-star-gold: #FFD700;
+    /* スターゴールド（極少使用） */
+
+    /* ========================================
+     テキストカラー
+     ======================================== */
+    --color-text-primary: #FFFFFF;
+    /* 白（メインテキスト） */
+    --color-text-secondary: #E0E0E0;
+    /* ライトグレー（サブテキスト） */
+    --color-text-muted: #A0A0A0;
+    /* ミュートグレー */
+    --color-text-dark: #1A1A1A;
+    /* ダークテキスト */
+
+    /* ========================================
+     背景カラー
+     ======================================== */
+    --color-bg-dark: #0A0E27;
+    --color-bg-card: rgba(27, 67, 50, 0.3);
+    --color-bg-card-hover: rgba(27, 67, 50, 0.5);
+    --color-bg-overlay: rgba(10, 14, 39, 0.8);
+
+    /* ========================================
+     グラデーション
+     ======================================== */
+    --gradient-main: linear-gradient(135deg, #0A0E27 0%, #1B4332 100%);
+    --gradient-accent: linear-gradient(90deg, #4A9EFF 0%, #B8A7E8 100%);
+    --gradient-card: linear-gradient(180deg, rgba(27, 67, 50, 0.4) 0%, rgba(10, 14, 39, 0.6) 100%);
+    --gradient-hero: linear-gradient(180deg, rgba(10, 14, 39, 0.3) 0%, rgba(10, 14, 39, 0.9) 100%);
+
+    /* ========================================
+     タイポグラフィ
+     ======================================== */
+    --font-heading: 'Orbitron', sans-serif;
+    --font-body: 'Noto Sans JP', sans-serif;
+    --font-accent: 'Roboto', sans-serif;
+
+    /* フォントサイズ */
+    --text-xs: 0.75rem;
+    /* 12px */
+    --text-sm: 0.875rem;
+    /* 14px */
+    --text-base: 1rem;
+    /* 16px */
+    --text-lg: 1.125rem;
+    /* 18px */
+    --text-xl: 1.25rem;
+    /* 20px */
+    --text-2xl: 1.5rem;
+    /* 24px */
+    --text-3xl: 2.25rem;
+    /* 36px */
+    --text-4xl: 3rem;
+    /* 48px */
+    --text-5xl: 3.5rem;
+    /* 56px */
+
+    /* フォントウェイト */
+    --font-light: 300;
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+
+    /* 行の高さ */
+    --leading-tight: 1.25;
+    --leading-normal: 1.6;
+    --leading-relaxed: 1.8;
+
+    /* ========================================
+     スペーシング（8pxグリッド）
+     ======================================== */
+    --space-1: 0.25rem;
+    /* 4px */
+    --space-2: 0.5rem;
+    /* 8px */
+    --space-3: 0.75rem;
+    /* 12px */
+    --space-4: 1rem;
+    /* 16px */
+    --space-5: 1.5rem;
+    /* 24px */
+    --space-6: 2rem;
+    /* 32px */
+    --space-8: 3rem;
+    /* 48px */
+    --space-10: 4rem;
+    /* 64px */
+    --space-12: 5rem;
+    /* 80px */
+    --space-16: 7.5rem;
+    /* 120px */
+
+    /* ========================================
+     レイアウト
+     ======================================== */
+    --container-max: 1200px;
+    --container-padding: var(--space-4);
+    --section-spacing: var(--space-12);
+    --section-spacing-lg: var(--space-16);
+
+    /* ========================================
+     ボーダー
+     ======================================== */
+    --border-radius-sm: 4px;
+    --border-radius: 8px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+    --border-radius-full: 9999px;
+
+    --border-width: 1px;
+    --border-color: rgba(149, 213, 178, 0.2);
+    --border-color-hover: rgba(149, 213, 178, 0.4);
+
+    /* ========================================
+     シャドウ
+     ======================================== */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+    --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 20px rgba(74, 158, 255, 0.3);
+    --shadow-glow-hover: 0 0 30px rgba(74, 158, 255, 0.5);
+
+    /* ========================================
+     トランジション
+     ======================================== */
+    --transition-fast: 0.15s ease;
+    --transition: 0.3s ease;
+    --transition-slow: 0.6s ease-out;
+
+    /* ========================================
+     z-index
+     ======================================== */
+    --z-base: 1;
+    --z-dropdown: 100;
+    --z-sticky: 500;
+    --z-fixed: 1000;
+    --z-modal: 1500;
+    --z-loading: 2000;
+
+    /* ========================================
+     ヘッダー
+     ======================================== */
+    --header-height: 80px;
+    --header-height-mobile: 60px;
+}
+
+/* アニメーション軽減設定 */
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --transition-fast: 0s;
+        --transition: 0s;
+        --transition-slow: 0s;
+    }
+}
